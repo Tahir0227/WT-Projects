@@ -1,0 +1,292 @@
+body {
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+
+  margin: 0;
+
+  padding: 0;
+}
+
+.container {
+  width: 420px;
+
+  margin: auto;
+
+  margin-top: 50px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* LIST PAGE CONTAINER */
+
+.listContainer {
+  width: 80%;
+
+  margin: auto;
+
+  margin-top: 40px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADINGS */
+
+h1 {
+  text-align: center;
+
+  color: #333;
+
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* FORM */
+
+label {
+  font-weight: bold;
+}
+
+/* INPUT */
+
+input,
+select {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-top: 6px;
+
+  margin-bottom: 15px;
+
+  border-radius: 6px;
+
+  border: 1px solid #ccc;
+
+  font-size: 15px;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+
+  outline: none;
+
+  box-shadow: 0px 0px 5px #007bff;
+}
+
+/* BUTTON */
+
+button {
+  width: 100%;
+
+  background: #007bff;
+
+  color: white;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* NAV BUTTON */
+
+.navButton {
+  background: #28a745;
+}
+
+.navButton:hover {
+  background: #1e7e34;
+}
+
+/* TABLE */
+
+table {
+  border-collapse: collapse;
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  background: white;
+
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+th {
+  background: #007bff;
+
+  color: white;
+
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+
+  text-align: center;
+}
+
+tr:hover {
+  background: #eaf3ff;
+}
+
+/* DELETE BUTTON */
+
+td button {
+  background: red;
+
+  width: auto;
+
+  padding: 8px 15px;
+}
+
+td button:hover {
+  background: darkred;
+}
+
+/* TOTAL */
+
+#total {
+  color: green;
+
+  font-weight: bold;
+
+  font-size: 26px;
+}
+
+/* MODE BUTTONS */
+
+.modeBox {
+  text-align: right;
+
+  margin-bottom: 10px;
+}
+
+.modeBox button {
+  width: auto;
+
+  padding: 5px 10px;
+
+  font-size: 14px;
+
+  border-radius: 5px;
+
+  background: #eee;
+
+  color: black;
+
+  border: 1px solid #ccc;
+
+  cursor: pointer;
+
+  margin-left: 5px;
+}
+
+.modeBox button:hover {
+  background: #ddd;
+}
+
+/* DARK MODE */
+
+.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark .container,
+.dark .listContainer {
+  background: #2c2c2c;
+}
+
+.dark h1,
+.dark h2,
+.dark table {
+  background: #2c2c2c;
+
+  color: white;
+}
+
+.dark th {
+  background: #444;
+}
+
+.dark input,
+.dark select {
+  background: #444;
+
+  color: white;
+
+  border: 1px solid #777;
+}
+
+/* EDIT POPUP */
+
+.editBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px gray;
+  display: none;
+  z-index: 1000;
+}
+
+/* CONTROL BAR */
+
+.controlBar {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  margin-bottom: 10px;
+}
+
+/* SORT DROPDOWN */
+
+.controlBar select {
+  width: 150px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+}

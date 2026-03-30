@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Username Availability Checker</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Username Availability Checker</h1>
+
+      <form id="userForm">
+        <label>Enter Username</label>
+
+        <input type="text" id="username" />
+        <span id="error"></span>
+
+        <button type="submit">Check Username</button>
+      </form>
+
+      <h2 id="result"></h2>
+
+      <button onclick="showUsers()" class="showBtn">Show All Users</button>
+
+      <h3 id="userTitle"></h3>
+
+      <ul id="userList"></ul>
+
+      <button onclick="hideUsers()" id="closeBtn" class="closeBtn">
+        Close Users List
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

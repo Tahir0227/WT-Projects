@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add Expense</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="modeBox">
+        <button onclick="darkMode()">🌙</button>
+        <button onclick="lightMode()">☀️</button>
+      </div>
+
+      <h1>Add Expense</h1>
+
+      <hr />
+
+      <form id="expenseForm">
+        <label>Expense Name</label>
+
+        <input type="text" id="name" required />
+
+        <label>Amount</label>
+
+        <input type="number" id="amount" required />
+
+        <label>Category</label>
+
+        <select id="category" required>
+          <option value="">Select Category</option>
+
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Shopping</option>
+          <option>Bills</option>
+        </select>
+
+        <label>Date</label>
+
+        <input type="date" id="date" required />
+
+        <button type="submit">Add Expense</button>
+      </form>
+      <a href="listExpense.html">
+        <button class="navButton">Go To Expense List →</button>
+      </a>
+    </div>
+
+    <script src="expenseTracker.js"></script>
+  </body>
+</html>
