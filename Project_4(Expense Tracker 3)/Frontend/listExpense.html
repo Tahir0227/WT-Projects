@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Expense List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="displayExpenses()">
+    <div class="dashboard-wrapper">
+      <nav class="sidebar">
+        <div class="logo">Tracker</div>
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="addExpense.html"> Add Expense</a></li>
+          <li><a href="listExpense.html" class="active"> All Expenses</a></li>
+          <li><a href="monthlyReport.html"> Monthly Report</a></li>
+          <li>
+            <a href="#" onclick="logout()" style="color: red">Logout</a>
+          </li>
+        </ul>
+        <div class="sidebar-mode">
+          <button onclick="darkMode()">🌙</button>
+          <button onclick="lightMode()">☀️</button>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <div class="listContainer">
+          <h1>Expense List</h1>
+          <hr />
+          <h2>Total Expense : ₹ <span id="total">0</span></h2>
+
+          <div class="controlBar">
+            <div class="filterGroup">
+              <label>Sort:</label>
+              <select onchange="sortExpense(this.value)">
+                <option value="">Select</option>
+                <option value="low">Low → High</option>
+                <option value="high">High → Low</option>
+              </select>
+
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name..."
+                onkeyup="filterExpenses()"
+              />
+
+              <label>Category:</label>
+              <select id="categoryFilter" onchange="filterExpenses()">
+                <option value="All">All</option>
+                <option>Food</option>
+                <option>Travel</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Entertainment</option>
+                <option>Healthcare</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="table"></tbody>
+          </table>
+
+          <div id="editBox" class="editBox">
+            <h3>Edit Expense</h3>
+            <label>Name</label><input type="text" id="editName" />
+            <label>Amount</label><input type="number" id="editAmount" />
+            <label>Category</label>
+            <select id="editCategory">
+              <option>Food</option>
+              <option>Travel</option>
+              <option>Shopping</option>
+              <option>Bills</option>
+              <option>Entertainment</option>
+              <option>Healthcare</option>
+              <option>Other</option>
+            </select>
+            <label>Date</label><input type="date" id="editDate" />
+            <button onclick="updateExpense()">Update</button>
+            <button
+              onclick="closeEdit()"
+              style="background: #64748b; margin-top: 5px"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="expenseTracker.js"></script>
+  </body>
+</html>

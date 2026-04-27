@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Monthly Report</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-wrapper">
+      <nav class="sidebar">
+        <div class="logo">Tracker</div>
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="addExpense.html"> Add Expense</a></li>
+          <li><a href="listExpense.html"> All Expenses</a></li>
+          <li><a href="monthlyReport.html"> Monthly Report</a></li>
+          <li>
+            <a href="#" onclick="logout()" style="color: red">Logout</a>
+          </li>
+        </ul>
+        <div class="sidebar-mode">
+          <button onclick="darkMode()">🌙</button>
+          <button onclick="lightMode()">☀️</button>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <div class="listContainer report-wide">
+          <h1>Monthly Analytics</h1>
+          <hr />
+
+          <h2 style="margin: 15px 0">
+            Monthly Total:
+            <span id="monthlyTotal" style="color: #22c55e">₹ 0</span>
+          </h2>
+
+          <div
+            class="controlBar"
+            style="justify-content: center; margin-bottom: 30px"
+          >
+            <label>Select Month:</label>
+            <input
+              type="month"
+              id="monthPicker"
+              onchange="generateMonthlyReport()"
+              style="width: 200px; margin-left: 10px"
+            />
+          </div>
+
+          <div class="analytics-row">
+            <div class="chart-box">
+              <canvas id="monthlyChart"></canvas>
+            </div>
+
+            <div id="monthlySummary" class="summary-box"></div>
+          </div>
+
+          <div class="reportTableContainer">
+            <h3>Transaction History</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="monthlyTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="expenseTracker.js"></script>
+  </body>
+</html>
